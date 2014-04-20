@@ -1,0 +1,22 @@
+name: ${project.name}
+version: ${project.version}
+main: com.codebreak.daichi110.autokick
+author: 越智 空海地(おち だいち)@Daichi110
+description: ${project.description}
+website: http://forum.minecraftuser.jp/viewtopic.php?f=38&t=16710
+
+commands:
+  autokick:
+    aliases: ak
+    permission: autokick.command
+    permission-message: 権限がありません。
+    usage: /<command> reload - Configファイルを再読込します。n\/<command> on - 機能を有効にします。n\/<command> off - 機能を無効にします。n\/<command> status - 機能が有効か無効かどうかを確認します。n\/<command> msg default - キックメッセージをconfig.ymlのmessegeに変更します。n//<command> msg set <メッセージ> - キックメッセージを<メッセージ>に変更します。  
+
+permissions:
+  autokick.command:
+  autokick.ignore:
+  autokick.*:
+    children:
+      autokick.command: true
+      autokick.ignore: true
+  
